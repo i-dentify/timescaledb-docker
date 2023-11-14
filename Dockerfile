@@ -29,7 +29,7 @@ RUN rm -f $(pg_config --sharedir)/extension/timescaledb*mock*.sql \
 # Now build image and copy in tools
 ############################
 ARG PG_VERSION
-FROM postgres:${PG_VERSION}-alpine
+FROM postgres:${PG_VERSION}
 ARG OSS_ONLY
 
 LABEL maintainer="Timescale https://www.timescale.com"
